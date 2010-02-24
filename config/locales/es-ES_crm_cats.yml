@@ -4,4 +4,6 @@ es-ES:
   # crm_google_accounts plugin internalization.
   #----------------------------------------------------------------------------
   your_google_account: Tienes configurada la cuenta {{value}}
+  no_google_account: No tiene configurada una cuenta todavía
   google_account_settings: Configuración de la cuenta de Google
+  save_account: Guardar cuenta
