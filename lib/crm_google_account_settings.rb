@@ -1,0 +1,1 @@
+require "crm_google_account_settings/crm_google_account_settings_view_hooks"

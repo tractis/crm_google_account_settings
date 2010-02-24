@@ -1,0 +1,7 @@
+es-ES:
+  language: Español (España)
+
+  # crm_google_accounts plugin internalization.
+  #----------------------------------------------------------------------------
+  your_google_account: Tienes configurada la cuenta {{value}}
+  google_account_settings: Configuración de la cuenta de Google
