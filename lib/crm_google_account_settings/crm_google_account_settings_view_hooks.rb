@@ -23,7 +23,7 @@ EOS
   PROFILE_SHOW = <<EOS
 .subtitle= t :google_account_settings
 .section
-  - if @current_user.pref[:google_account].blank? || @current_user.pref[:google_password].blank?
+  - unless google_account_is_defined
     .label= t(:no_google_account)
   - else
     = label= t(:your_google_account, @current_user.pref[:google_account])
