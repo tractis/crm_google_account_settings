@@ -8,6 +8,7 @@ Installation
 
 The plugin can be installed by running:
 
+	sudo gem install gdata4ruby
     script/plugin install git://github.com/tractis/crm_google_account_settings.git
 
 Then restart your web server.
