@@ -10,12 +10,12 @@ class GoogleAccountsController < ApplicationController
     password = @current_user.pref[:google_password] = params[:google_password]
     
     if account.blank?
-      flash[:error] = 'Please provide your Google Account.'
+      flash[:error] = "#{t :missing_account}"
     # TODO(ibolmo): Stronger email validation
     elsif not account.match('@')
-      flash[:error] = 'Google Account should be an email address.'
+      flash[:error] = "#{t :invalid_account}"
     elsif password.blank?
-      flash[:error] = 'No password given.'
+      flash[:error] = "#{t :missing_password}"
     end
     return redirect_to :controller => 'profile' if flash[:error]
     
@@ -23,9 +23,9 @@ class GoogleAccountsController < ApplicationController
       service = GData4Ruby::Service.new()
       service.authenticate(account, password, 'cl')
       
-      flash[:notice] = 'Google Account saved.'   
+      flash[:notice] = "#{t :your_google_account, account}"
     rescue GData4Ruby::HTTPRequestFailed => e
-      flash[:error] = 'Authentication failed. Check your account and password.'
+      flash[:error] = "#{t :auth_failed}"
       @current_user.pref[:google_password] = nil
     end
     redirect_to :controller => "profile"

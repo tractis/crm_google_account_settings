@@ -7,3 +7,9 @@ es-ES:
   no_google_account: No tiene configurada una cuenta todavía
   google_account_settings: Configuración de la cuenta de Google
   save_account: Guardar cuenta
+  
+  missing_account: Falta la cuenta de Google
+  invalid_account: Cuenta de Google debe ser una dirección de correo electrónico
+  missing_password: No contraseña dada
+  auth_failed: Error de autenticación. Revise su cuenta y la contraseña
+  
