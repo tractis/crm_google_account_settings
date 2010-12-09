@@ -21,6 +21,7 @@ class CrmGoogleAccountSettingsViewHooks < FatFreeCRM::Callback::Base
 EOS
   
   PROFILE_SHOW = <<EOS
+%br
 .subtitle= t :google_account_settings
 .section
   - unless google_account_is_defined
